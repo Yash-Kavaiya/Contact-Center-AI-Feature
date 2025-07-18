@@ -65,6 +65,23 @@ st.markdown("""
         color: #dc3545;
         font-weight: bold;
     }
+    /* Sidebar button styling */
+    .stButton > button {
+        width: 100%;
+        margin-bottom: 5px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        transition: all 0.3s ease;
+    }
+    .stButton > button:hover {
+        background-color: #667eea;
+        color: white;
+        border-color: #667eea;
+    }
+    /* Active button indicator */
+    .nav-section {
+        margin-bottom: 1rem;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -79,19 +96,48 @@ st.markdown("""
 
 # Sidebar navigation
 st.sidebar.title("🎯 Navigation")
-feature_selection = st.sidebar.selectbox(
-    "Choose a Feature",
-    ["Overview", 
-     "🤖 Agentic AI Revolution", 
-     "🎯 Real-Time Coaching", 
-     "🌐 Omnichannel Integration", 
-     "🔐 Voice Biometrics", 
-     "Speaker Diarization", 
-     "Call Summarization", 
-     "PII Detection", 
-     "Sentiment Analysis", 
-     "Responsible AI"]
-)
+
+# Initialize session state for selected feature
+if 'selected_feature' not in st.session_state:
+    st.session_state.selected_feature = "📊 Overview"
+
+# Show current page indicator
+st.sidebar.markdown(f"**Current Page:** {st.session_state.selected_feature}")
+st.sidebar.markdown("---")
+
+# Sidebar buttons for navigation
+if st.sidebar.button("📊 Overview", use_container_width=True):
+    st.session_state.selected_feature = "📊 Overview"
+
+if st.sidebar.button("🤖 Agentic AI", use_container_width=True):
+    st.session_state.selected_feature = "🤖 Agentic AI Revolution"
+
+if st.sidebar.button("🎯 Real-Time Coaching", use_container_width=True):
+    st.session_state.selected_feature = "🎯 Real-Time Coaching"
+
+if st.sidebar.button("🌐 Omnichannel Integration", use_container_width=True):
+    st.session_state.selected_feature = "🌐 Omnichannel Integration"
+
+if st.sidebar.button("🔐 Voice Biometrics", use_container_width=True):
+    st.session_state.selected_feature = "🔐 Voice Biometrics"
+
+if st.sidebar.button("🎤 Speaker Diarization", use_container_width=True):
+    st.session_state.selected_feature = "🎤 Speaker Diarization"
+
+if st.sidebar.button("📝 Call Summarization", use_container_width=True):
+    st.session_state.selected_feature = "📝 Call Summarization"
+
+if st.sidebar.button("🔒 PII Detection", use_container_width=True):
+    st.session_state.selected_feature = "🔒 PII Detection"
+
+if st.sidebar.button("😊 Sentiment Analysis", use_container_width=True):
+    st.session_state.selected_feature = "😊 Sentiment Analysis"
+
+if st.sidebar.button("⚖️ Responsible AI", use_container_width=True):
+    st.session_state.selected_feature = "⚖️ Responsible AI"
+
+# Get the selected feature
+feature_selection = st.session_state.selected_feature
 
 # Generate sample data
 @st.cache_data
@@ -130,7 +176,7 @@ Agent: You're very welcome, Mr. Smith. Thank you for calling TechSupport Plus, a
 """
 
 # Main content based on selection
-if feature_selection == "Overview":
+if feature_selection == "📊 Overview":
     # Overview page with metrics and charts
     st.markdown("## 📊 AI Solutions Overview")
     
@@ -311,23 +357,23 @@ elif feature_selection == "🔐 Voice Biometrics":
     show_voice_biometrics()
 
 # Speaker Diarization page
-elif feature_selection == "Speaker Diarization":
+elif feature_selection == "🎤 Speaker Diarization":
     show_speaker_diarization()
 
 # Call Summarization page
-elif feature_selection == "Call Summarization":
+elif feature_selection == "📝 Call Summarization":
     show_call_summarization()
 
 # PII Detection page
-elif feature_selection == "PII Detection":
+elif feature_selection == "🔒 PII Detection":
     show_pii_detection()
 
 # Sentiment Analysis page
-elif feature_selection == "Sentiment Analysis":
+elif feature_selection == "😊 Sentiment Analysis":
     show_sentiment_analysis()
 
 # Responsible AI page
-elif feature_selection == "Responsible AI":
+elif feature_selection == "⚖️ Responsible AI":
     show_responsible_ai()
 
 # Footer
