@@ -8,15 +8,28 @@ from datetime import datetime, timedelta
 import json
 
 def show_sentiment_analysis():
-    st.header("😊 Sentiment Analysis")
+    st.header("😊 Advanced Emotional Intelligence & Sentiment Analysis")
     
     st.markdown("""
-    Real-time sentiment analysis tracks customer emotions throughout conversations, 
-    helping agents respond appropriately and identify potential escalations.
+    **Real-time emotional intelligence** with comprehensive sentiment scoring (0-10 scale), 
+    empathy-driven responses, and advanced mood insights for agent coaching and escalation detection.
     """)
     
+    # Key metrics
+    col1, col2, col3, col4 = st.columns(4)
+    with col1:
+        st.metric("🎯 Emotion Detection", "Real-time", "↗️ Voice tone analysis")
+    with col2:
+        st.metric("📊 Sentiment Scale", "0-10", "↗️ Comprehensive scoring")
+    with col3:
+        st.metric("🤝 Empathy Coaching", "Live", "↗️ Agent guidance")
+    with col4:
+        st.metric("🚨 Escalation Detection", "Predictive", "↗️ Proactive alerts")
+    
     # Tabs for different sections
-    tab1, tab2, tab3, tab4 = st.tabs(["🎯 Live Demo", "📊 Analytics", "⚙️ Configuration", "🔌 API Usage"])
+    tab1, tab2, tab3, tab4, tab5 = st.tabs([
+        "🎯 Live Emotional Intelligence", "📊 Advanced Analytics", "🤖 Google Gemini Integration", "🎭 Mood Insights", "🔌 API Usage"
+    ])
     
     with tab1:
         # Live Demo Section

@@ -13,6 +13,11 @@ from pages.call_summarization import show_call_summarization
 from pages.pii_detection import show_pii_detection
 from pages.sentiment_analysis import show_sentiment_analysis
 from pages.responsible_ai import show_responsible_ai
+# Import new revolutionary AI features
+from pages.agentic_ai import show_agentic_ai
+from pages.real_time_coaching import show_real_time_coaching
+from pages.omnichannel_integration import show_omnichannel_integration
+from pages.voice_biometrics import show_voice_biometrics
 
 # Page configuration
 st.set_page_config(
@@ -66,8 +71,9 @@ st.markdown("""
 # Header
 st.markdown("""
 <div class="main-header">
-    <h1>🤖 Future of Contact Center AI Powered Solutions</h1>
-    <p>Advanced AI capabilities transforming customer service operations</p>
+    <h1>🤖 Contact Center AI Revolution: 2024-2025 Innovation Landscape</h1>
+    <p>Agentic AI systems that autonomously resolve 80% of customer issues with 400% productivity gains</p>
+    <p><strong>Leading the transformation from reactive cost centers to proactive revenue drivers</strong></p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -75,7 +81,16 @@ st.markdown("""
 st.sidebar.title("🎯 Navigation")
 feature_selection = st.sidebar.selectbox(
     "Choose a Feature",
-    ["Overview", "Speaker Diarization", "Call Summarization", "PII Detection", "Sentiment Analysis", "Responsible AI"]
+    ["Overview", 
+     "🤖 Agentic AI Revolution", 
+     "🎯 Real-Time Coaching", 
+     "🌐 Omnichannel Integration", 
+     "🔐 Voice Biometrics", 
+     "Speaker Diarization", 
+     "Call Summarization", 
+     "PII Detection", 
+     "Sentiment Analysis", 
+     "Responsible AI"]
 )
 
 # Generate sample data
@@ -127,30 +142,30 @@ if feature_selection == "Overview":
     
     with col1:
         st.metric(
-            label="📞 Total Calls Processed",
-            value="1.2M+",
-            delta="15.3% vs last month"
+            label="🤖 Agentic AI Resolution",
+            value="80%",
+            delta="Target by 2029"
         )
     
     with col2:
         st.metric(
-            label="🎯 Speaker Accuracy",
-            value="94.7%",
-            delta="2.1% improvement"
+            label="🚀 Productivity Gains",
+            value="400%",
+            delta="Industry leading results"
         )
     
     with col3:
         st.metric(
-            label="😊 Positive Sentiment",
-            value="72.3%",
-            delta="5.8% increase"
+            label="� Market Value",
+            value="$19.5B",
+            delta="By 2034 (18.2% CAGR)"
         )
     
     with col4:
         st.metric(
-            label="🔒 PII Protected",
-            value="99.8%",
-            delta="0.2% improvement"
+            label="🎯 Customer Interactions",
+            value="95%",
+            delta="AI-handled by 2025"
         )
     
     # Charts
@@ -175,40 +190,60 @@ if feature_selection == "Overview":
         st.plotly_chart(fig_accuracy, use_container_width=True)
     
     # Feature highlights
-    st.markdown("### 🌟 AI Features")
+    st.markdown("### 🌟 Revolutionary AI Features")
     
     features = [
         {
-            "title": "🎤 Speaker Diarization",
-            "description": "Advanced AI that identifies and separates different speakers in audio conversations with 95%+ accuracy.",
+            "title": "🤖 Agentic AI Systems",
+            "description": "Autonomous AI that resolves 80% of customer issues without human intervention by 2029, featuring non-deterministic intelligence with configurable guardrails.",
+            "benefits": ["Autonomous decision-making", "400% productivity gains", "$100M+ revenue generation", "Genesys Cloud AI Studio"]
+        },
+        {
+            "title": "🎯 Real-Time Coaching",
+            "description": "Google Cloud AI Trainer with Gemini-powered coaching providing personalized training and contextual guidance during customer interactions.",
+            "benefits": ["5X conversation growth", "68% sales improvement", "$20M operational savings", "Mood insights and prediction"]
+        },
+        {
+            "title": "🌐 Omnichannel Integration",
+            "description": "Salesforce + Amazon Connect partnership delivering seamless voice, chat, email integration with complete context preservation across 26 languages.",
+            "benefits": ["Zero context loss", "Dynamic language switching", "Mobile-first authentication", "Unified agent desktop"]
+        },
+        {
+            "title": "🔐 Voice Biometrics Security",
+            "description": "Pindrop's revolutionary deepfake warranty achieving 99% detection accuracy with behavioral biometrics projected to reach $14B market by 2032.",
+            "benefits": ["99% deepfake detection", "<1% false positives", "34.8% ATO reduction", "Real-time fraud prevention"]
+        },
+        {
+            "title": "🎤 Advanced Speaker Diarization",
+            "description": "Enhanced AI that identifies and separates different speakers in audio conversations with 95%+ accuracy and real-time processing.",
             "benefits": ["Real-time speaker identification", "Multi-language support", "Noise reduction", "Quality assurance"]
         },
         {
-            "title": "📝 Call Summarization",
-            "description": "Intelligent summarization of customer conversations using state-of-the-art NLP models.",
+            "title": "📝 Intelligent Call Summarization",
+            "description": "State-of-the-art NLP models for automatic conversation summarization with action item identification and performance analytics.",
             "benefits": ["Automatic key point extraction", "Customizable summary formats", "Action item identification", "Performance analytics"]
         },
         {
-            "title": "🔒 PII Detection",
-            "description": "Comprehensive protection of personally identifiable information with real-time detection and masking.",
+            "title": "🔒 Advanced PII Detection",
+            "description": "Comprehensive protection of personally identifiable information with real-time detection, masking, and GDPR compliance automation.",
             "benefits": ["GDPR compliance", "Real-time masking", "Custom pattern detection", "Audit trails"]
         },
         {
-            "title": "😊 Sentiment Analysis",
-            "description": "Real-time emotional intelligence to understand customer satisfaction and agent performance.",
+            "title": "😊 Emotional Intelligence",
+            "description": "Real-time sentiment analysis with emotional intelligence to understand customer satisfaction and provide agent coaching insights.",
             "benefits": ["Real-time emotion tracking", "Customer satisfaction scoring", "Agent coaching insights", "Escalation detection"]
         },
         {
-            "title": "⚖️ Responsible AI",
-            "description": "Ethical AI framework ensuring fairness, transparency, and accountability in all AI operations.",
+            "title": "⚖️ Responsible AI Framework",
+            "description": "Ethical AI ensuring fairness, transparency, and accountability with bias detection and explainable AI decisions.",
             "benefits": ["Bias detection and mitigation", "Explainable AI decisions", "Compliance monitoring", "Ethical guidelines enforcement"]
         }
     ]
     
-    # Display features in a 2-column layout
-    col1, col2 = st.columns(2)
+    # Display features in a 3-column layout for better organization
+    col1, col2, col3 = st.columns(3)
     for i, feature in enumerate(features):
-        current_col = col1 if i % 2 == 0 else col2
+        current_col = [col1, col2, col3][i % 3]
         with current_col:
             st.markdown(f"""
             <div class="feature-card">
@@ -219,6 +254,61 @@ if feature_selection == "Overview":
                 </ul>
             </div>
             """, unsafe_allow_html=True)
+
+    # Market insights and projections
+    st.markdown("### 📈 Market Transformation Insights")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown("""
+        #### 🚀 **Breakthrough Achievements**
+        - **Genesys Cloud:** 40% of customers using AI capabilities
+        - **IONOS Group:** 68% improvement in sales conversions  
+        - **Bell Canada:** $20 million in operational savings
+        - **Best Buy:** 90 seconds reduction in resolution time
+        """)
+        
+        st.markdown("""
+        #### 🎯 **Gartner 2029 Predictions**
+        - 80% autonomous issue resolution
+        - 30% reduction in operational costs
+        - 95% AI-handled customer interactions
+        - $19.5B market size by 2034
+        """)
+    
+    with col2:
+        st.markdown("""
+        #### 🏆 **Industry Leadership**
+        - **Amazon Connect:** Unlimited AI usage with predictable pricing
+        - **NICE CXone:** 100% interaction analysis vs 20% sampling
+        - **Microsoft Copilot:** Real-time suggestions across 26 languages
+        - **Pindrop Security:** 99% deepfake detection accuracy
+        """)
+        
+        st.markdown("""
+        #### 💡 **Innovation Impact**
+        - Conversational AI: 24% CAGR growth
+        - Behavioral Biometrics: $14B market by 2032
+        - Voice Recognition: 3x faster than typing
+        - Emotional Intelligence: Real-time mood insights
+        """)
+
+# Agentic AI Revolution page
+elif feature_selection == "🤖 Agentic AI Revolution":
+    show_agentic_ai()
+
+# Real-Time Coaching page
+elif feature_selection == "🎯 Real-Time Coaching":
+    show_real_time_coaching()
+
+# Omnichannel Integration page
+elif feature_selection == "🌐 Omnichannel Integration":
+    show_omnichannel_integration()
+
+# Voice Biometrics page
+elif feature_selection == "🔐 Voice Biometrics":
+    show_voice_biometrics()
 
 # Speaker Diarization page
 elif feature_selection == "Speaker Diarization":
@@ -244,7 +334,8 @@ elif feature_selection == "Responsible AI":
 st.markdown("---")
 st.markdown("""
 <div style="text-align: center; color: #666; padding: 2rem;">
-    <p>🤖 <strong>Contact Center AI Solutions</strong> | Powered by Advanced Machine Learning</p>
-    <p>Transforming customer service with responsible AI technology</p>
+    <p>🤖 <strong>Contact Center AI Revolution: 2024-2025</strong> | Powered by Advanced Machine Learning & Agentic AI</p>
+    <p>Transforming customer service with autonomous AI systems that resolve 80% of issues</p>
+    <p><small>Market projected to reach $19.5B by 2034 | Leading organizations achieving 400% productivity gains</small></p>
 </div>
 """, unsafe_allow_html=True)
