@@ -6,8 +6,10 @@ import plotly.graph_objects as go
 import time
 from datetime import datetime, timedelta
 import random
+from .common_header import show_header
 
 def show_agentic_ai():
+    show_header()
     st.header("🤖 Agentic AI Revolution")
     
     st.markdown("""

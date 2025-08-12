@@ -6,8 +6,10 @@ import plotly.graph_objects as go
 import time
 from datetime import datetime, timedelta
 import random
+from .common_header import show_header
 
 def show_real_time_coaching():
+    show_header()
     st.header("🎯 Real-Time Coaching & Predictive Analytics")
     
     st.markdown("""

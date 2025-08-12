@@ -18,6 +18,8 @@ from pages.agentic_ai import show_agentic_ai
 from pages.real_time_coaching import show_real_time_coaching
 from pages.omnichannel_integration import show_omnichannel_integration
 from pages.voice_biometrics import show_voice_biometrics
+# Import common header
+from pages.common_header import show_header
 
 # Page configuration
 st.set_page_config(
@@ -84,6 +86,9 @@ st.markdown("""
     }
 </style>
 """, unsafe_allow_html=True)
+
+# Show common header
+show_header()
 
 # Header
 st.markdown("""

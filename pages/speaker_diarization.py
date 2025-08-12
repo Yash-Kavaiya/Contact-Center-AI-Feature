@@ -6,8 +6,10 @@ import plotly.graph_objects as go
 import time
 from io import BytesIO
 import base64
+from .common_header import show_header
 
 def show_speaker_diarization():
+    show_header()
     st.header("🎤 Speaker Diarization")
     
     st.markdown("""

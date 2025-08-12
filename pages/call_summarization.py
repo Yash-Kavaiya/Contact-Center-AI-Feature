@@ -6,8 +6,10 @@ import plotly.graph_objects as go
 import time
 from datetime import datetime, timedelta
 import json
+from .common_header import show_header
 
 def show_call_summarization():
+    show_header()
     st.header("📝 Call Summarization")
     
     st.markdown("""

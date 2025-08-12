@@ -6,8 +6,10 @@ import plotly.graph_objects as go
 import time
 from datetime import datetime, timedelta
 import json
+from .common_header import show_header
 
 def show_responsible_ai():
+    show_header()
     st.header("⚖️ Responsible AI")
     
     st.markdown("""

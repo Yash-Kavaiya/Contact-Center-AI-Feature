@@ -7,8 +7,10 @@ import time
 import re
 from datetime import datetime, timedelta
 import json
+from .common_header import show_header
 
 def show_pii_detection():
+    show_header()
     st.header("🔒 Advanced PII Detection & GDPR Compliance")
     
     st.markdown("""
