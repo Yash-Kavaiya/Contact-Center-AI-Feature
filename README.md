@@ -95,6 +95,8 @@ Each feature provides comprehensive API documentation in the "API Usage" tabs, i
 
 ## 📊 Performance Metrics
 
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/6169eeaf-f41c-435a-9b90-a4b93a488cb8" />
+
 ### Current Performance Statistics
 - 📞 **Daily Call Processing**: 2,847+ calls processed
 - 🎯 **AI Accuracy**: 94.2% average across all features
