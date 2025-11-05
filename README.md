@@ -19,15 +19,22 @@
 
 - [Overview](#-overview)
 - [Features Overview](#-features-overview)
+- [Usage Guide](#-usage-guide)
+- [API Integration](#-api-integration)
+- [Configuration](#%EF%B8%8F-configuration)
 - [Quick Start](#-quick-start)
 - [System Architecture](#%EF%B8%8F-system-architecture)
 - [Technology Stack](#-technology-stack)
 - [Performance Metrics](#-performance-metrics)
-- [Usage Guide](#-usage-guide)
-- [API Integration](#-api-integration)
-- [Configuration](#%EF%B8%8F-configuration)
+- [Screenshots & Demos](#-screenshots--demos)
 - [Contributing](#-contributing)
+- [Documentation](#-documentation)
+- [Security & Privacy](#-security--privacy)
+- [Roadmap](#-roadmap)
+- [Recognition & Awards](#-recognition--awards)
+- [Support & Community](#-support--community)
 - [License](#-license)
+- [Acknowledgments](#-acknowledgments)
 
 ---
 
@@ -365,8 +372,6 @@ security:
 | `ENABLE_VOICE_BIOMETRICS` | Enable biometric auth | true |
 | `ENABLE_EXPORT` | Enable data export | true |
 | `ENABLE_API_ACCESS` | Enable API endpoints | false |
-
-## 📊 Performance Metrics
 
 ---
 
