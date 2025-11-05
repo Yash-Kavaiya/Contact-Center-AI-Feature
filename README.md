@@ -237,6 +237,8 @@ st.progress(sentiment['confidence'])
 
 ## 🔌 API Integration
 
+> **Note:** The API endpoints, authentication, and code examples below demonstrate the intended API structure for this application. Actual API implementation may vary based on deployment configuration.
+
 ### API Endpoints Overview
 
 | Endpoint | Method | Description | Rate Limit |
@@ -305,6 +307,8 @@ ws.onmessage = (event) => {
 ```
 
 ### SDK Support
+
+> **Note:** SDK packages and documentation links below are examples for demonstration purposes. Actual SDKs may vary based on deployment.
 
 | Language | Package | Installation | Documentation |
 |----------|---------|--------------|---------------|
@@ -832,13 +836,15 @@ mypy .
 
 ### Additional Resources
 
-| Resource | Description | Link |
-|----------|-------------|------|
-| 📖 **User Guide** | Complete usage documentation | [Link](docs/user-guide.md) |
-| 🔧 **API Reference** | API endpoint documentation | [Link](docs/api-reference.md) |
-| 🎓 **Tutorials** | Step-by-step tutorials | [Link](docs/tutorials/) |
-| 🐛 **Troubleshooting** | Common issues and solutions | [Link](docs/troubleshooting.md) |
-| 📝 **Changelog** | Version history and updates | [Link](CHANGELOG.md) |
+> **Note:** The following documentation resources are planned for future releases. This table represents the intended documentation structure.
+
+| Resource | Description | Status |
+|----------|-------------|--------|
+| 📖 **User Guide** | Complete usage documentation | 📋 Planned |
+| 🔧 **API Reference** | API endpoint documentation | 📋 Planned |
+| 🎓 **Tutorials** | Step-by-step tutorials | 📋 Planned |
+| 🐛 **Troubleshooting** | Common issues and solutions | 📋 Planned |
+| 📝 **Changelog** | Version history and updates | 📋 Planned |
 
 ### Architecture Documentation
 
@@ -949,12 +955,14 @@ timeline
 
 ### Get Help
 
+> **Note:** Support channels listed below are examples. Please refer to the repository's actual contact information.
+
 | Channel | Description | Response Time |
 |---------|-------------|---------------|
-| 📧 **Email** | support@contactcenter-ai.com | 24-48 hours |
-| 💬 **Discord** | [Join Community](https://discord.gg/ccai) | Real-time |
-| 🐦 **Twitter** | [@ContactCenterAI](https://twitter.com/ccai) | 24 hours |
-| 📚 **Documentation** | [docs.contactcenter-ai.com](https://docs.example.com) | Instant |
+| 📧 **Email** | Contact via repository | 24-48 hours |
+| 💬 **Discord** | Community discussions | Real-time |
+| 🐦 **Twitter** | Social media updates | 24 hours |
+| 📚 **Documentation** | This README and docs | Instant |
 | 🎫 **Issue Tracker** | [GitHub Issues](https://github.com/Yash-Kavaiya/Contact-Center-AI-Feature/issues) | 48 hours |
 
 ### Community Resources
